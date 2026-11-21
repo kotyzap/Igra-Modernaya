@@ -7,8 +7,6 @@ The look and feel of a 1980s LCD handheld: grey reflective LCD, segments that ca
 colour backdrop, round rubber buttons, piezo beeps, a power-on segment test and a clock with ДП/ПП.
 All games, characters and artwork are original.
 
-![Home — four games, 2×2](docs/img/01-home.png)
-
 | Game | URL | Controls | Idea |
 |---|---|---|---|
 | **BTC MINER** | [im.4xs.dev/btc](https://im.4xs.dev/btc) | 4 corner buttons | A miner catches ₿ coins rolling down from four ASIC miners |
