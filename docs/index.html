@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Pavel Kotyza">
+<meta name="description" content="Igra Modernaya — 4XS Pocket LCD: Bitcoin-themed pocket LCD handheld games for your phone. Play at im.4xs.dev">
+<meta property="og:title" content="Igra Modernaya — 4XS Pocket LCD">
+<meta property="og:description" content="Bitcoin-themed pocket LCD handheld games. Play at im.4xs.dev">
+<meta property="og:image" content="https://kotyzap.github.io/Igra-Modernaya/img/01-home.png">
+<title>Igra Modernaya — 4XS Pocket LCD</title>
+<style>
+:root{--bg:#f4f3ef;--fg:#1f2328;--muted:#5f646b;--card:#fff;--line:#e3e0d8;--acc:#ee5a1f;--acc2:#c8461a}
+[data-theme=dark]{--bg:#15171a;--fg:#ececec;--muted:#a0a6ad;--card:#1f2226;--line:#33373c;--acc:#ff7a3c;--acc2:#ff9a66}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{font-weight:800;letter-spacing:.5px;text-decoration:none;color:var(--fg)}
+.brand span{color:var(--acc)}
+nav{display:flex;gap:16px;align-items:center;font-size:14px}
+nav a{color:var(--fg);text-decoration:none;opacity:.8}
+nav a:hover{opacity:1}
+.pill{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+@media (max-width:720px){nav a.hide-s{display:none}}
+.hero{padding:56px 0 28px;text-align:center}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:0 0 10px;letter-spacing:-.5px}
+.hero h1 small{display:block;font-size:.42em;color:var(--acc);letter-spacing:4px;font-weight:800;margin-bottom:8px}
+.hero p{max-width:720px;margin:0 auto 22px;color:var(--muted);font-size:18px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:14px 28px;border-radius:999px;box-shadow:0 6px 0 var(--acc2)}
+.cta:active{transform:translateY(4px);box-shadow:0 2px 0 var(--acc2)}
+.cta2{margin-left:12px;font-weight:600}
+.shot{display:block;width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.14)}
+.hero .shot{margin-top:34px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+section h2{font-size:28px;margin:0 0 6px}
+section .lead{color:var(--muted);margin:0 0 24px}
+.games{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:820px){.games{grid-template-columns:1fr}}
+.game{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.game img{width:100%;display:block;border-bottom:1px solid var(--line)}
+.game .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.game h3{margin:0;font-size:19px;letter-spacing:1px;color:var(--acc)}
+.game p{margin:0;color:var(--muted);font-size:15px}
+.game .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.game a.play{font-weight:700;text-decoration:none}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.feat{grid-template-columns:1fr}}
+.f{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.f b{display:block;margin-bottom:4px}
+.f span{color:var(--muted);font-size:15px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:820px){.gal{grid-template-columns:1fr 1fr}}
+.gal figure{margin:0}
+.gal img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in}
+.gal figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.steps{margin:0;padding-left:20px}
+.steps li{margin:6px 0}
+kbd{font:600 13px ui-monospace,Menlo,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;color:var(--muted);text-transform:uppercase}
+.docs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:820px){.docs{grid-template-columns:1fr 1fr}}
+.docs a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:var(--fg);font-weight:600}
+.docs a small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:2px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);text-align:center}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:20;cursor:zoom-out;padding:20px}
+#lb img{max-width:100%;max-height:100%;border-radius:10px}
+#lb.on{display:flex}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#">IGRA <span>MODERNAYA</span></a>
+  <nav>
+    <a class="hide-s" href="#games">Games</a>
+    <a class="hide-s" href="#features">Features</a>
+    <a class="hide-s" href="#gallery">Gallery</a>
+    <a class="hide-s" href="#docs">Docs</a>
+    <a href="https://im.4xs.dev"><b>Play ▶</b></a>
+    <button class="pill" id="theme">🌙 Dark</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1><small>4XS POCKET LCD</small>Pocket LCD games,<br>to the moon.</h1>
+    <p>Four Bitcoin-themed handheld LCD games for your phone — grey reflective LCD, segments that cast a shadow,
+       round rubber buttons, piezo beeps, a clock with ДП/ПП and a world Top 5. Original games, original art.</p>
+    <a class="cta" href="https://im.4xs.dev">▶ Play at im.4xs.dev</a>
+    <a class="cta2" href="https://github.com/kotyzap/Igra-Modernaya">GitHub repo →</a>
+    <img class="shot" src="img/01-home.png" alt="4XS Pocket LCD home screen with four games" loading="eager">
+  </div>
+
+  <section id="games">
+    <h2>The games</h2>
+    <p class="lead">Each game has its own address — share a link straight to your favourite.</p>
+    <div class="games">
+      <article class="game"><img src="img/05-btc-miner-play.png" alt="BTC MINER" loading="lazy"><div class="b">
+        <h3>BTC MINER</h3>
+        <p>Four ASIC miners roll ₿ coins down cable trays. Catch them in the bucket before they drop. Bull in the window = a miss counts only half; the bear runs off with dropped coins.</p>
+        <div class="meta"><span class="tag">4 corner buttons</span><span class="tag">+1 per coin</span><a class="play" href="https://im.4xs.dev/btc">Play /btc →</a></div></div></article>
+      <article class="game"><img src="img/07-satoshis-kitchen-play.png" alt="SATOSHI'S KITCHEN" loading="lazy"><div class="b">
+        <h3>SATOSHI'S KITCHEN</h3>
+        <p>The chef flips coins in a pan. Every catch splits the coin smaller until it is 1 sat — cash it out for +5. The bear steals with a fork, the mouse takes what drops.</p>
+        <div class="meta"><span class="tag">◀ ▶</span><span class="tag">₿ → sats</span><a class="play" href="https://im.4xs.dev/kitchen">Play /kitchen →</a></div></div></article>
+      <article class="game"><img src="img/09-not-your-keys-funds-frozen.png" alt="NOT YOUR KEYS" loading="lazy"><div class="b">
+        <h3>NOT YOUR KEYS</h3>
+        <p>Dive from the COLD WALLET boat to the seabed vault and bring the coins home. The Rug-Pull Squid's five tentacles freeze your funds — even at the vault.</p>
+        <div class="meta"><span class="tag">◀ ▶</span><span class="tag">+1 grab · +3 bank</span><a class="play" href="https://im.4xs.dev/keys">Play /keys →</a></div></div></article>
+      <article class="game"><img src="img/10-to-the-moon-play.png" alt="TO THE MOON" loading="lazy"><div class="b">
+        <h3>TO THE MOON</h3>
+        <p>Steer the rocket across three lanes, dodge falling FUD clouds and grab bitcoins on the way up. Every layout is guaranteed to have a way through.</p>
+        <div class="meta"><span class="tag">◀ ▶</span><span class="tag">altitude + ₿</span><a class="play" href="https://im.4xs.dev/moon">Play /moon →</a></div></div></article>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <p class="lead">Built to feel like the real hardware.</p>
+    <div class="feat">
+      <div class="f"><b>Power-on segment test</b><span>Every segment lights up for a moment, then the clock appears with a self-playing demo.</span></div>
+      <div class="f"><b>GAME A · GAME B · TIME</b><span>Two speeds, and TIME cycles clock → record A → record B on the LCD.</span></div>
+      <div class="f"><b>HALVING ½</b><span>2× speed and 2× rewards in any game — the lamp glows orange.</span></div>
+      <div class="f"><b>World Top 5</b><span>Make the top 5 and enter your three initials, arcade style.</span></div>
+      <div class="f"><b>Landscape, full screen</b><span>Add to Home Screen for an app without browser bars.</span></div>
+      <div class="f"><b>Sound & haptics</b><span>Square-wave piezo beeps and a tick on every button press.</span></div>
+      <div class="f"><b>Czech / English</b><span>Picked automatically from your phone's language.</span></div>
+      <div class="f"><b>Realistic LCD</b><span>Textured reflector, ghost segments, drop shadows and a glass glare.</span></div>
+      <div class="f"><b>Admin dashboard</b><span>Players, countries, devices, games and Top 5 moderation behind Cloudflare Access.</span></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p class="lead">Tap a screenshot to enlarge.</p>
+    <div class="gal">
+      <figure><img src="img/03-power-on-segment-test.png" alt="" loading="lazy"><figcaption>Power-on segment test</figcaption></figure>
+      <figure><img src="img/04-btc-miner-clock-demo.png" alt="" loading="lazy"><figcaption>Clock with demo play</figcaption></figure>
+      <figure><img src="img/06-halving-on.png" alt="" loading="lazy"><figcaption>HALVING — 2× speed, 2× rewards</figcaption></figure>
+      <figure><img src="img/08-not-your-keys-treasure.png" alt="" loading="lazy"><figcaption>Grabbing at the vault</figcaption></figure>
+      <figure><img src="img/11-top5-enter-initials.png" alt="" loading="lazy"><figcaption>Top 5 — enter your initials</figcaption></figure>
+      <figure><img src="img/12-top5-saved.png" alt="" loading="lazy"><figcaption>Saved, rank #2</figcaption></figure>
+      <figure><img src="img/02-top5.png" alt="" loading="lazy"><figcaption>World Top 5 overview</figcaption></figure>
+      <figure><img src="img/13-lcd-record-display.png" alt="" loading="lazy"><figcaption>Record shown on the LCD</figcaption></figure>
+      <figure><img src="img/15-home-czech.png" alt="" loading="lazy"><figcaption>Czech version</figcaption></figure>
+      <figure><img src="img/16-desktop-to-the-moon.png" alt="" loading="lazy"><figcaption>Desktop with keyboard</figcaption></figure>
+      <figure><img src="img/14-rotate-portrait.png" alt="" loading="lazy"><figcaption>Portrait: rotate + Home Screen help</figcaption></figure>
+      <figure><img src="img/17-admin-dashboard-sample-data.png" alt="" loading="lazy"><figcaption>Admin dashboard (sample data)</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="two">
+      <div>
+        <h2>Play full screen on iPhone</h2>
+        <ol class="steps">
+          <li>Open <a href="https://im.4xs.dev">im.4xs.dev</a> in Safari.</li>
+          <li>Tap <b>Share</b> → <b>Add to Home Screen</b> → <b>Add</b>.</li>
+          <li>Launch from the <b>4XS LCD</b> icon and turn the phone sideways.</li>
+        </ol>
+        <p class="lead" style="margin-top:14px">Android: browser menu ⋮ → <b>Install app</b>.</p>
+      </div>
+      <div>
+        <h2>Keyboard</h2>
+        <table>
+          <tr><th>Key</th><th>Action</th></tr>
+          <tr><td><kbd>Q</kbd> <kbd>A</kbd> <kbd>P</kbd> <kbd>L</kbd></td><td>BTC MINER corners</td></tr>
+          <tr><td><kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd></td><td>move</td></tr>
+          <tr><td><kbd>1</kbd> / <kbd>2</kbd></td><td>GAME A / GAME B</td></tr>
+          <tr><td><kbd>T</kbd></td><td>TIME (clock / records)</td></tr>
+          <tr><td><kbd>H</kbd></td><td>HALVING</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="docs">
+    <h2>Documentation</h2>
+    <p class="lead">Rules, controls, architecture and the design behind the LCD.</p>
+    <div class="docs">
+      <a href="https://github.com/kotyzap/Igra-Modernaya/blob/main/docs/games.md">Games<small>rules & scoring</small></a>
+      <a href="https://github.com/kotyzap/Igra-Modernaya/blob/main/docs/controls.md">Controls<small>phone & keyboard</small></a>
+      <a href="https://github.com/kotyzap/Igra-Modernaya/blob/main/docs/top5-and-admin.md">Top 5 & admin<small>records, dashboard</small></a>
+      <a href="https://github.com/kotyzap/Igra-Modernaya/blob/main/docs/architecture.md">Architecture<small>Cloudflare, API, data</small></a>
+      <a href="https://github.com/kotyzap/Igra-Modernaya/blob/main/design/README.md">Design<small>face, LCD, engines, sound</small></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Made by <b>Pavel Kotyza</b> · <a href="https://4xs.dev">4xs.dev</a> · <a href="https://ko-fi.com/pavelk">Ko-fi</a> · <a href="https://im.4xs.dev">im.4xs.dev</a></div>
+</footer>
+<div id="lb"><img alt=""></div>
+<script>
+const root = document.documentElement, btn = document.getElementById('theme');
+function theme(t){ root.dataset.theme = t; btn.textContent = t === 'light' ? '🌙 Dark' : '☀️ Light'; try{ localStorage.setItem('im-docs-theme', t); }catch(e){} }
+try{ theme(localStorage.getItem('im-docs-theme') || 'light'); }catch(e){ theme('light'); }
+btn.onclick = () => theme(root.dataset.theme === 'light' ? 'dark' : 'light');
+const lb = document.getElementById('lb');
+document.querySelectorAll('.gal img, .game img').forEach(i => i.onclick = () => { lb.querySelector('img').src = i.src; lb.classList.add('on'); });
+lb.onclick = () => lb.classList.remove('on');
+</script>
+</body>
+</html>
